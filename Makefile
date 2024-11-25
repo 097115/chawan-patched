@@ -4,7 +4,7 @@ NIMC ?= $(NIM) c
 OBJDIR ?= .obj
 OUTDIR ?= target
 # These paths are quoted in recipes.
-PREFIX ?= /usr/local
+PREFIX ?= $(HOME)/usr/local/bundled/chawan
 DOCPREFIX ?= $(PREFIX)/share/doc
 MANPREFIX ?= $(PREFIX)/share/man
 MANPREFIX1 ?= $(MANPREFIX)/man1
