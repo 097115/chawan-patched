@@ -1981,9 +1981,8 @@ proc drawLines*(container: Container; display: var FixedGrid;
 proc highlightMarks*(container: Container; display: var FixedGrid;
     hlcolor: CellColor) =
   for mark in container.marks.values:
-    if mark.x in container.fromx ..< container.fromx + display.width and
-        mark.y in container.fromy ..< container.fromy + display.height:
-      let x = mark.x - container.fromx
+    if mark.y in container.fromy ..< container.fromy + display.height:
+      let x = 0
       let y = mark.y - container.fromy
       let n = y * display.width + x
       if hlcolor != defaultColor:
