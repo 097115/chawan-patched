@@ -146,7 +146,7 @@ a[href]::-cha-link-marker {
 ::-cha-link-hint {
 	all: initial;
 	position: absolute;
-	background: pink;
+	color: orange;
 	counter-increment: -cha-hint-counter;
 	content: counter(-cha-hint-counter, -cha-hint)
 }
