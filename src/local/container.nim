@@ -2009,7 +2009,7 @@ proc highlightMarks*(container: Container; display: var FixedGrid;
   for mark in container.marks:
     if mark.pos.x in container.fromx ..< container.fromx + display.width and
         mark.pos.y in container.fromy ..< container.fromy + display.height:
-      let x = mark.pos.x - container.fromx
+      let x = 0
       let y = mark.pos.y - container.fromy
       let n = y * display.width + x
       if hlcolor != defaultColor:
