@@ -2331,8 +2331,10 @@ proc discardTab(pager: Pager) {.jsfunc.} =
     if prevTab != nil:
       if nextTab != nil:
         nextTab.prev = prevTab
+        pager.tab = nextTab
+      else:
+        pager.tab = prevTab
       prevTab.next = nextTab
-      pager.tab = prevTab
     else:
       if prevTab != nil:
         prevTab.next = nextTab
