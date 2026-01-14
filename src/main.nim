@@ -277,7 +277,6 @@ proc forkForkServer(loaderSockVec: array[2, cint]): ForkServer =
     die("failed to fork fork the server process")
   elif pid == 0:
     # child process
-    discard setsid()
     closeStdin()
     closeStdout()
     westream.moveFd(STDERR_FILENO)
