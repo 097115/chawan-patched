@@ -158,7 +158,8 @@ a[href]::-cha-link-marker {
 ::-cha-link-hint {
 	all: initial;
 	position: absolute;
-	background: -cha-ansi(bright-magenta);
+	background: -cha-ansi(yellow);
+	color: -cha-ansi(black);
 	counter-increment: -cha-hint-counter;
 	content: counter(-cha-hint-counter, -cha-hint)
 }
