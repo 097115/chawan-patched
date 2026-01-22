@@ -48,7 +48,7 @@ import utils/sandbox
 import utils/strwidth
 import utils/twtstr
 
-const ChaVersionStr0 = "Chawan browser v0.4-dev"
+const ChaVersionStr0 = "0.4.1769031683"
 
 const ChaVersionStr = block:
   var s = ChaVersionStr0 & " ("
