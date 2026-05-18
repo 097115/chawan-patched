@@ -772,9 +772,12 @@ Pager.prototype.discardTab = function() {
             buffer = next;
         }
         if (prevTab != null) {
-            if (nextTab != null)
+            if (nextTab != null) {
                 nextTab.prev = prevTab;
-            this.tab = prevTab;
+                this.tab = nextTab;
+            } else {
+                this.tab = prevTab;
+            };
         } else {
             nextTab.prev = prevTab;
             if (tab == this.tabHead)
