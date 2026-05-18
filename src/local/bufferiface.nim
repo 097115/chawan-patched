@@ -1711,7 +1711,7 @@ proc highlightMarks*(iface: BufferInterface; display: var FixedGrid;
   for mark in iface.marks:
     if mark.pos.x in iface.fromx ..< iface.fromx + display.width and
         mark.pos.y in iface.fromy ..< iface.fromy + display.height:
-      let x = mark.pos.x - iface.fromx
+      let x = 0
       let y = mark.pos.y - iface.fromy
       let n = y * display.width + x
       if hlcolor != defaultColor:
