@@ -389,7 +389,7 @@ proc findNextParagraph(bc: BufferContext; handle: PagerHandle;
         inc y
       while y < bc.lines.len and not bc.lines[y].str.onlyWhitespace():
         inc y
-  return y
+  return y + 1
 
 proc findRevNthLink(bc: BufferContext; handle: PagerHandle; i: int):
     tuple[x, y: int] {.proxy.} =
