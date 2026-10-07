@@ -2918,7 +2918,7 @@ const ReTextStart = /\S/gu;
         if (iface == null)
             return;
         this.markPos0();
-        const y = await iface.findNextParagraph(this.cursory, n);
+        const y = await iface.findNextParagraph(n > 0 ? this.cursory : this.cursory - 1, n);
         this.setCursorY(y)
         this.markPos();
     }
