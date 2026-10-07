@@ -394,7 +394,7 @@ proc findNextParagraph(bc: BufferContext; handle: PagerHandle;
       while y < bc.lines.len and not bc.lines[y].str.toOpenArray()
           .onlyWhitespace():
         inc y
-  return y
+  return y + 1
 
 proc findRevNthLink(bc: BufferContext; handle: PagerHandle; i: int):
     tuple[x, y: int] {.proxy.} =
